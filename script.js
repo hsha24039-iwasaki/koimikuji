@@ -6,8 +6,8 @@ const fortunes =[
     "凶　無理せず慎重に行動しよう"
 ];
 
-const button = document.getElementById("omikuji-bt");
-const result = document.getElementById("result");
+const button = document.getElementById("iwa");
+const result = document.getElementById("iwasi");
 
 button.addEventListener("click", function() {
     const randomNumber = Math.floor(Math.random() * fortunes.length);
