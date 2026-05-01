@@ -11,6 +11,23 @@ const result = document.getElementById("iwasi");
 
 button.addEventListener("click", function() {
     const randomNumber = Math.floor(Math.random() * fortunes.length);
+    const resultText = fortunes[(randomNumber)];
 
     result.textContent = fortunes[(randomNumber)];
+
+    if(resultText.includes("大吉")){
+       result.style.color = "red";
+    }
+    if(resultText.includes("中吉")){
+       result.style.color = "green";
+    }
+    if(resultText.includes("普段")){
+       result.style.color = "black";
+    }
+    if(resultText.includes("小吉")){
+       result.style.color = "yelow";
+    }
+    if(resultText.includes("凶")){
+       result.style.color = "bule";
+    }
 });
