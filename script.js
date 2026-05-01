@@ -8,6 +8,7 @@ const fortunes =[
 
 const button = document.getElementById("iwa");
 const result = document.getElementById("iwasi");
+const advice = document.getElementById("advice");
 
 button.addEventListener("click", function() {
     const randomNumber = Math.floor(Math.random() * fortunes.length);
@@ -17,11 +18,12 @@ button.addEventListener("click", function() {
 
     if(resultText.includes("大吉")){
        result.style.color = "red";
+       advice.textContent = "今日は積極的に行動しよう";
     }
     if(resultText.includes("中吉")){
        result.style.color = "green";
     }
-    if(resultText.includes("普段")){
+    if(resultText.includes("安泰")){
        result.style.color = "black";
     }
     if(resultText.includes("小吉")){
