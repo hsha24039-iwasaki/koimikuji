@@ -1,4 +1,4 @@
-const fortunes =[
+const fortunes = [
     "大吉　素敵な出会いがあるかも！",
     "中吉　少し勇気を出すと良いことが起きる",
     "吉　普段通り過ごせば今日は安泰",
@@ -7,8 +7,11 @@ const fortunes =[
 ];
 
 const button = document.getElementById("iwa");
+const omikujiImg = document.getElementById("omikuji-img");
 const result = document.getElementById("iwasi");
 const advice = document.getElementById("advice");
+
+omikujiImg.innerHTML = "<img src='happy."
 
 button.addEventListener("click", function() {
     const randomNumber = Math.floor(Math.random() * fortunes.length);
@@ -19,17 +22,16 @@ button.addEventListener("click", function() {
     if(resultText.includes("大吉")){
        result.style.color = "red";
        advice.textContent = "今日は積極的に行動しよう";
-    }
-    if(resultText.includes("中吉")){
+
+    }else if(resultText.includes("中吉")){
        result.style.color = "green";
-    }
-    if(resultText.includes("安泰")){
+
+    }else if(resultText.includes("吉")){
+       result.style.color = "blue";
+
+    }else if(resultText.includes("小吉")){
+       result.style.color = "yellow";
+    } else {
        result.style.color = "black";
-    }
-    if(resultText.includes("小吉")){
-       result.style.color = "yelow";
-    }
-    if(resultText.includes("凶")){
-       result.style.color = "bule";
     }
 });
