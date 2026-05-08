@@ -11,7 +11,7 @@ const omikujiImg = document.getElementById("omikuji-img");
 const result = document.getElementById("iwasi");
 const advice = document.getElementById("advice");
 
-omikujiImg.innerHTML = "<img src='happy."
+omikujiImg.innerHTML = "<img src='happy.png'>";
 
 button.addEventListener("click", function() {
     const randomNumber = Math.floor(Math.random() * fortunes.length);
