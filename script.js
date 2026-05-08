@@ -31,7 +31,7 @@ button.addEventListener("click", function() {
 
     }else if(resultText.includes("小吉")){
        result.style.color = "yellow";
-    } else {
+    }else if(resultText.includes("凶")){
        result.style.color = "black";
     }
 });
